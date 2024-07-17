@@ -23,7 +23,7 @@ class Berita extends Model
         'category_id' => 'required',
         'title' => 'required',
         'content' => 'required',
-        'path' => 'required|image',
+        'path' => 'required|image|max:2048',
         'date' => 'required|date',
         'editor' => 'required'
     ];
@@ -35,7 +35,7 @@ class Berita extends Model
             'title' => 'required',
             'content' => 'required',
             'date' => 'required|date',
-            'path' => 'image',
+            'path' => 'image|max:2048',
             'editor' => 'required'
         ];
     }

@@ -33,7 +33,12 @@ Route::prefix('admin')->group(function () {
     //Peraturan
     Route::get('/peraturan/data', [\App\Http\Controllers\Admin\PeraturanController::class, 'anyData'])
         ->name('peraturan.data');
-    Route::get('/peraturan/file/{id}', [\App\Http\Controllers\Admin\PeraturanController::class, 'file'])
+    Route::get('/peraturan/file/{slug}', [\App\Http\Controllers\Admin\PeraturanController::class, 'file'])
         ->name('peraturan.file');
     Route::resource('peraturan', \App\Http\Controllers\Admin\PeraturanController::class);
+
+    //Intervensi
+    Route::get('/intervensi/file/{id}', [\App\Http\Controllers\Admin\IntervensiController::class, 'file'])
+        ->name('intervensi.file');
+    Route::resource('intervensi', \App\Http\Controllers\Admin\IntervensiController::class);
 });

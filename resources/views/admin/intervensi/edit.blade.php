@@ -14,10 +14,10 @@
     <!-- Page Header -->
     <div class="page-header">
         <div>
-            <h2 class="main-content-title tx-24 mg-b-5">Edit Berita</h2>
+            <h2 class="main-content-title tx-24 mg-b-5">Tambah Berita</h2>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{route('berita.index')}}">Berita</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit Berita</li>
+                <li class="breadcrumb-item active" aria-current="page">Data Baru</li>
             </ol>
         </div>
     </div>
@@ -26,19 +26,10 @@
     <!-- Row -->
     <div class="row sidemenu-height">
         <div class="col-lg-10">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
-                        <h6 class="main-content-label mb-1">Edit Berita</h6>
+                        <h6 class="main-content-label mb-1">Data Baru</h6>
                         <p class="text-muted card-sub-title">Isi sesuai dengan format.</p>
                     </div>
                     <div class="row row-sm">

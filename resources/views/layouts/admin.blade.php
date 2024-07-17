@@ -153,26 +153,29 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link with-sub" href="javascript:void(0)">
+                            <a class="nav-link" href="{{route('berita.index')}}">
                                 <span class="shape1"></span>
                                 <span class="shape2"></span>
-                                <i  class="ti-wallet sidemenu-icon menu-icon "></i>
-                                <span class="sidemenu-label">Crypto
-										<span class="sidemenu-label2">Currencies</span>
-									</span>
-                                <i class="angle fe fe-chevron-right"></i>
+                                <i class="fas fa-newspaper sidemenu-icon menu-icon "></i>
+                                <span class="sidemenu-label">Berita</span>
                             </a>
-                            <ul class="nav-sub">
-                                <li class="side-menu-label1"><a href="javascript:void(0)">Crypto Currencies</a></li>
-                                <li class="nav-sub-item"> <a class="nav-sub-link" href="crypto-dashbaord.html">Dashboard</a></li>
-                                <li class="nav-sub-item"><a class="nav-sub-link" href="crypto-market.html">Marketcap</a></li>
-                                <li class="nav-sub-item"><a class="nav-sub-link" href="crypto-currency-exchange.html">Currency exchange</a></li>
-                                <li class="nav-sub-item"><a class="nav-sub-link" href="crypto-buy-sell.html">Buy & Sell</a></li>
-                                <li class="nav-sub-item"><a class="nav-sub-link" href="crypto-wallet.html">Wallet</a></li>
-                                <li class="nav-sub-item"><a class="nav-sub-link" href="crypto-transcations.html">Transcations</a></li>
-                            </ul>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('peraturan.index')}}">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="fas fa-file-signature sidemenu-icon menu-icon "></i>
+                                <span class="sidemenu-label">Legalitas</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('intervensi.index')}}">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="fas fa-file-signature sidemenu-icon menu-icon "></i>
+                                <span class="sidemenu-label">Program Intervensi</span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="slide-right" id="slide-right"><i class="fe fe-chevron-right"></i></div>
                 </div>

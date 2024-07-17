@@ -26,6 +26,15 @@
     <!-- Row -->
     <div class="row sidemenu-height">
         <div class="col-lg-10">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
@@ -67,13 +76,13 @@
             });
             $('.dropify').dropify({
                 messages: {
-                    'default': 'Drag and drop a file here or click',
-                    'replace': 'Drag and drop or click to replace',
+                    'default': 'Drag and drop berkas atau klik disini',
+                    'replace': 'Drag and drop atau klik untuk mengganti',
                     'remove': 'Remove',
-                    'error': 'Ooops, something wrong appended.'
+                    'error': 'Ooops, Terjadi kesalahan.'
                 },
                 error: {
-                    'fileSize': 'The file size is too big (2M max).'
+                    'fileSize': 'Ukuran berkas terlalu besar (Maksimal 2MB).'
                 }
             });
         });

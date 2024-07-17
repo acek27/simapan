@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             {{ html()->label('Upload Dokumen') }}
-            {{ html()->file('path')->class('form-control')->accept('.pdf')->required()}}
+            {{ html()->file('path')->class('form-control')->accept('.pdf')}}
         </div>
         <button class="btn ripple btn-main-primary btn-block">Submit</button>
     </div>

@@ -36,7 +36,7 @@ class BeritaController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        Validator::make($data, $this->model::$rulesCreate);
+        Validator::make($data, $this->model::$rulesCreate)->validate();
         $post = $this->hasFile($request->path, 'berita');
         $data['path'] = $post;
         $this->model::create($data);
@@ -47,7 +47,7 @@ class BeritaController extends Controller
     {
         $poster = $this->model::find($id);
         $data = $request->all();
-        Validator::make($data, $this->model::rulesEdit($poster));
+        Validator::make($data, $this->model::rulesEdit($poster))->validate();
         if ($request->file('path') == '') {
             unset($poster['path']);
         } else {

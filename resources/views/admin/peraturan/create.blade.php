@@ -1,12 +1,5 @@
 @extends('layouts.admin')
-@push('css')
-    <!-- Internal Summernote css-->
-    <link rel="stylesheet" href="{{asset('assets/plugins/summernote-editor/summernote.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/plugins/summernote-editor/summernote1.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/plugins/quill/quill.bubble.css')}}" rel="stylesheet">
-    <!-- InternalFileupload css-->
-    <link href="{{asset('assets/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
-@endpush
+
 @section('title')
     <title>Peraturan - Tambah Peraturan</title>
 @endsection
@@ -26,6 +19,15 @@
     <!-- Row -->
     <div class="row sidemenu-height">
         <div class="col-lg-10">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="card custom-card">
                 <div class="card-body">
                     <div>
@@ -44,16 +46,3 @@
     <!-- End Row -->
 
 @endsection
-@push('js')
-    <!-- INTERNAL Summernote Editor js -->
-    <script src="{{asset('assets/plugins/summernote-editor/summernote1.js')}}"></script>
-    {{--    <script src="{{asset('assets/js/summernote.js')}}"></script>--}}
-    <!-- Internal Fileuploads js-->
-    <script src="{{asset('assets/plugins/fileuploads/js/fileupload.js')}}"></script>
-    <script src="{{asset('assets/plugins/fileuploads/js/file-upload.js')}}"></script>
-    <script>
-        $(document).ready(function () {
-
-        });
-    </script>
-@endpush
