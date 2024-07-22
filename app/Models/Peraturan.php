@@ -16,6 +16,7 @@ class Peraturan extends Model
     protected $fillable = ["nama_peraturan", "jenis_id", "tentang", "tanggal_penetapan", "nomor", "status", "path", "slug"];
     protected $attributes = ['status' => 1];
     protected $with = ['jenis'];
+    protected $casts = ['id' => 'string'];
 
 
     public static $rulesCreate = [

@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dokumentasi extends Model
 {
-    use HasUlids;
+    use HasUlids, SoftDeletes;
 
     protected $table = 'dokumentasi';
     protected $fillable = ['nama_kegiatan', 'tanggal'];
     protected $with = ['galeri'];
+    protected $casts = ['id' => 'string'];
 
 
     public static $rulesCreate = [

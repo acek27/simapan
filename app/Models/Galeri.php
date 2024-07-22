@@ -12,6 +12,7 @@ class Galeri extends Model
 
     protected $table = 'galeri';
     protected $fillable = ['dokumentasi_id', 'path'];
+    protected $casts = ['id' => 'string'];
 
     public static $rulesCreate = [
         'path.*' => 'required|image|max:2048',

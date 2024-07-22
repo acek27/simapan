@@ -169,10 +169,18 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route('kemiskinan.index')}}">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="fas fa-pie-chart sidemenu-icon menu-icon "></i>
+                                <span class="sidemenu-label">Data Kemiskinan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('intervensi.index')}}">
                                 <span class="shape1"></span>
                                 <span class="shape2"></span>
-                                <i class="fas fa-file-signature sidemenu-icon menu-icon "></i>
+                                <i class="fas fa-image sidemenu-icon menu-icon "></i>
                                 <span class="sidemenu-label">Program Intervensi</span>
                             </a>
                         </li>

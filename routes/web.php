@@ -27,18 +27,25 @@ require __DIR__ . '/auth.php';
 Route::prefix('admin')->group(function () {
     //Berita
     Route::get('/berita/data', [\App\Http\Controllers\Admin\BeritaController::class, 'anyData'])
-        ->name('berita.data');
-    Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class);
+        ->name('berita.data')->middleware('auth');
+    Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class)->middleware('auth');
 
     //Peraturan
     Route::get('/peraturan/data', [\App\Http\Controllers\Admin\PeraturanController::class, 'anyData'])
-        ->name('peraturan.data');
+        ->name('peraturan.data')->middleware('auth');
     Route::get('/peraturan/file/{slug}', [\App\Http\Controllers\Admin\PeraturanController::class, 'file'])
         ->name('peraturan.file');
-    Route::resource('peraturan', \App\Http\Controllers\Admin\PeraturanController::class);
+    Route::resource('peraturan', \App\Http\Controllers\Admin\PeraturanController::class)->middleware('auth');
 
     //Intervensi
     Route::get('/intervensi/file/{id}', [\App\Http\Controllers\Admin\IntervensiController::class, 'file'])
         ->name('intervensi.file');
-    Route::resource('intervensi', \App\Http\Controllers\Admin\IntervensiController::class);
+    Route::resource('intervensi', \App\Http\Controllers\Admin\IntervensiController::class)->middleware('auth');
+
+    //Kemiskinan
+    Route::get('/kemiskinan/file/{id}', [\App\Http\Controllers\Admin\KemiskinanController::class, 'file'])
+        ->name('kemiskinan.file');
+    Route::get('/kemiskinan/data', [\App\Http\Controllers\Admin\KemiskinanController::class, 'anyData'])
+        ->name('kemiskinan.data')->middleware('auth');
+    Route::resource('kemiskinan', \App\Http\Controllers\Admin\KemiskinanController::class)->middleware('auth');
 });
