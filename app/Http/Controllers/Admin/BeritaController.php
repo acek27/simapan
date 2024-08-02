@@ -69,10 +69,18 @@ class BeritaController extends Controller
             })
             ->make(true);
     }
+
+    public function file($slug)
+    {
+        $data = $this->model::findOrFail($slug);
+        $result = $this->showFile($data->path);
+        return $result;
+    }
+
     public function destroy($id)
     {
         $data = $this->model::findOrFail($id);
-        Storage::delete( $data->path);
+        Storage::delete($data->path);
         $this->model::destroy($id);
     }
 

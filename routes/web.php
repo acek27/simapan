@@ -3,9 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\DashboardController::class, 'index'])->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,6 +26,8 @@ Route::prefix('admin')->group(function () {
     //Berita
     Route::get('/berita/data', [\App\Http\Controllers\Admin\BeritaController::class, 'anyData'])
         ->name('berita.data')->middleware('auth');
+    Route::get('/berita/file/{slug}', [\App\Http\Controllers\Admin\BeritaController::class, 'file'])
+        ->name('berita.file');
     Route::resource('berita', \App\Http\Controllers\Admin\BeritaController::class)->middleware('auth');
 
     //Peraturan
@@ -49,3 +49,6 @@ Route::prefix('admin')->group(function () {
         ->name('kemiskinan.data')->middleware('auth');
     Route::resource('kemiskinan', \App\Http\Controllers\Admin\KemiskinanController::class)->middleware('auth');
 });
+
+Route::get('/legalitas', [\App\Http\Controllers\Guest\WebsiteController::class, 'legalitas'])
+    ->name('legalitas.index');
