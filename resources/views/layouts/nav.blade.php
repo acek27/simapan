@@ -14,7 +14,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('welcome')}}">Beranda</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('news.index')}}">Berita</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('legalitas.index')}}">Legalitas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Data Kemiskinan</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('data_kemiskinan.index')}}">Data Kemiskinan</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('program.index')}}">Program Intervensi Kemiskinan</a></li>
                 {{--                <li class="nav-item dropdown submenu">--}}
                 {{--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"--}}

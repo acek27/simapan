@@ -153,6 +153,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{route('peta.index')}}">
+                                <span class="shape1"></span>
+                                <span class="shape2"></span>
+                                <i class="fas fa-map-marked sidemenu-icon menu-icon "></i>
+                                <span class="sidemenu-label">Peta</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('berita.index')}}">
                                 <span class="shape1"></span>
                                 <span class="shape2"></span>

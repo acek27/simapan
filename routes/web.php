@@ -65,3 +65,5 @@ Route::get('/news/{id}', [\App\Http\Controllers\Guest\WebsiteController::class, 
     ->name('news.show');
 Route::get('/program', [\App\Http\Controllers\Guest\WebsiteController::class, 'program'])
     ->name('program.index');
+Route::get('/data_kemiskinan', [\App\Http\Controllers\Guest\WebsiteController::class, 'dataKemiskinan'])
+    ->name('data_kemiskinan.index');
