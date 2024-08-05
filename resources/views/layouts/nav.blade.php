@@ -11,10 +11,11 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="index.html">Berandan</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('welcome')}}">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('news.index')}}">Berita</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('legalitas.index')}}">Legalitas</a></li>
-                <li class="nav-item"><a class="nav-link" href="service.html">Data Kemiskinan</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.html">Program Intervensi Kemiskinan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Data Kemiskinan</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('program.index')}}">Program Intervensi Kemiskinan</a></li>
                 {{--                <li class="nav-item dropdown submenu">--}}
                 {{--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"--}}
                 {{--                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}

@@ -48,7 +48,20 @@ Route::prefix('admin')->group(function () {
     Route::get('/kemiskinan/data', [\App\Http\Controllers\Admin\KemiskinanController::class, 'anyData'])
         ->name('kemiskinan.data')->middleware('auth');
     Route::resource('kemiskinan', \App\Http\Controllers\Admin\KemiskinanController::class)->middleware('auth');
+
+    //Peta
+    Route::get('/peta/data', [\App\Http\Controllers\Admin\PetaController::class, 'anyData'])
+        ->name('peta.data')->middleware('auth');
+    Route::get('/peta/file/{id}', [\App\Http\Controllers\Admin\PetaController::class, 'file'])
+        ->name('peta.file');
+    Route::resource('peta', \App\Http\Controllers\Admin\PetaController::class)->middleware('auth');
 });
 
 Route::get('/legalitas', [\App\Http\Controllers\Guest\WebsiteController::class, 'legalitas'])
     ->name('legalitas.index');
+Route::get('/news', [\App\Http\Controllers\Guest\WebsiteController::class, 'news'])
+    ->name('news.index');
+Route::get('/news/{id}', [\App\Http\Controllers\Guest\WebsiteController::class, 'newsShow'])
+    ->name('news.show');
+Route::get('/program', [\App\Http\Controllers\Guest\WebsiteController::class, 'program'])
+    ->name('program.index');
