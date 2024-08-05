@@ -41,27 +41,19 @@
 @yield('content')
 <!--================Footer Area =================-->
 <footer class="footr_area">
-    <div class="footer_copyright">
-        <div class="container">
-            <div class="float-sm-left">
-                <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                    All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-                    <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
-            </div>
-            <div class="float-sm-right">
-                <ul>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
+    <footer class="footr_area footer">
+        <div class="footer_copyright">
+            <div class="container">
+                <div class="float-sm-left">
+                    <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Dinas Komunikasi dan Informatika -
+                        <a href="{{url('situbondokab.go.id')}}" target="_blank">Pemerintah Kabupaten Situbondo</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 </footer>
 <!--================End Footer Area =================-->
 
