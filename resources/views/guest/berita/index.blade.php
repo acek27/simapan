@@ -4,7 +4,11 @@
     <section class="banner_area">
         <div class="container">
             <div class="banner_inner_text">
-                <h2>Berita/Informasi</h2>
+                @if(Session::has('kategori'))
+                    <h2>{{ Session::get('kategori') }}</h2>
+                @else
+                    <h2>Berita/Informasi</h2>
+                @endif
                 <p>Baca berita dan Informasi lebih lengkap</p>
             </div>
         </div>
@@ -17,6 +21,9 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="blog_main_inner">
+                        @if(Session::has('status'))
+                            <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('status') }}</p>
+                        @endif
                         @foreach($data as $datum)
                             <div class="blog_main_item">
                                 <div class="blog_img">
@@ -43,13 +50,16 @@
                 <div class="col-lg-3">
                     <div class="blog_right_sidebar">
                         <aside class="r_widget search_widget">
+                            {{ html()->form('get')->action(route('news.index'))->acceptsFiles()->open() }}
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                                <input type="text" class="form-control" placeholder="Cari disini..." name="keyword"
+                                       aria-label="Search">
                                 <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button"><i
+                                        <button class="btn btn-secondary" type="submit"><i
                                                 class="fa fa-search"></i></button>
                                     </span>
                             </div>
+                            {{ html()->form()->close() }}
                         </aside>
                         <aside class="r_widget categories_widget">
                             <div class="r_w_title">
@@ -57,7 +67,10 @@
                             </div>
                             <ul>
                                 @foreach($kategori as $item)
-                                    <li><a href="#">{{$item->category_name}}</a></li>
+                                    <li>
+                                        <a href="{{route('news.index', ['kategori' => $item->id])}}">{{$item->category_name}}
+                                            (<span>{{$data->where('category_id', $item->id)->count()}}</span>)</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </aside>

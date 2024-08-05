@@ -17,7 +17,7 @@
     <!-- Rev slider css -->
     <link href="{{asset('website/vendors/revolution/css/settings.css')}}" rel="stylesheet">
     <link href="{{asset('website/vendors/revolution/css/layers.css')}}" rel="stylesheet">
-    <link href="{{asset('website/vendors/revolution/css/navigation.css')}}" rel="stylesheet">
+{{--    <link href="{{asset('website/vendors/revolution/css/navigation.css')}}" rel="stylesheet">--}}
 
     <!-- Extra plugin css -->
     <link href="{{asset('website/vendors/owl-carousel/owl.carousel.min.css')}}" rel="stylesheet">
@@ -349,7 +349,7 @@
 <script src="{{asset('website/vendors/counterup/countto.js')}}"></script>
 <script src="{{asset('website/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
 <script src="{{asset('website/vendors/magnify-popup/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('website/js/smoothscroll.js')}}"></script>
+{{--<script src="{{asset('website/js/smoothscroll.js')}}"></script>--}}
 
 <script src="{{asset('website/js/theme.js')}}"></script>
 <script !src="">

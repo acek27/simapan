@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Beritakategori extends Model
 {
     protected $table = 'berita_kategori';
+    protected $primaryKey = 'id';
+    protected $casts = ['id' => 'string'];
 }

@@ -50,13 +50,16 @@
                 <div class="col-lg-3">
                     <div class="blog_right_sidebar">
                         <aside class="r_widget search_widget">
+                            {{ html()->form('get')->action(route('news.index'))->acceptsFiles()->open() }}
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                                <input type="text" class="form-control" placeholder="Cari disini..." name="keyword"
+                                       aria-label="Search">
                                 <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button"><i
+                                        <button class="btn btn-secondary" type="submit"><i
                                                 class="fa fa-search"></i></button>
                                     </span>
                             </div>
+                            {{ html()->form()->close() }}
                         </aside>
                         <aside class="r_widget categories_widget">
                             <div class="r_w_title">
